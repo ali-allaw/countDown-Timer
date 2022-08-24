@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.countDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    height: 100%;
+    width: 100%;
+    margin-top: 200px;
+}
+.countDown span {
+    position: relative;
+    border: 1px solid rgb(204, 201, 201);
+    padding: 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(46, 135, 252);
+    transition: .3s;
+}
+.countDown span:hover{
+    border: 1px solid rgb(46, 135, 252);
+}
+.countDown span::after { 
+    content: "After";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+    width: 100%;
+    bottom: -29px;
+    left: 0;
+    transform: translateX(-1%);
+    border: 1px solid rgb(184, 181, 181);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: none;
+    color: #777;
+    font-size: 15px;
+    font-weight: normal;
+    transition: .3s;
+}
+.countDown span:first-child:after {
+    content: "Days";
+}
+.countDown span:nth-child(2)::after {
+    content: "Hours";
+}.countDown span:nth-child(3):after {
+    content: "Minutes";
+}.countDown span:last-child:after {
+    content: "seconds";
+}
+.countDown span:hover::after{
+    border: 1px solid rgb(46, 135, 252);
+}
